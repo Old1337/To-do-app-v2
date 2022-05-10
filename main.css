@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo-container {
+  width: 600px;
+  margin: 30px auto 0;
+  background-color: #f6f6f6;
+}
+
+.todo-container .add-task {
+  padding: 15px;
+  background-color: #009688;
+  position: relative;
+  display: flex;
+  gap: 15px;
+}
+
+.add-task input {
+  display: block;
+  padding: 10px 15px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: calc(100% - 15px);
+  color: #fff;
+  font-size: 20px;
+}
+
+.add-task input:focus {
+  outline: none;
+}
+
+.add-task .plus {
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  background-color: #fff;
+  right: 12px;
+  border-radius: 50%;
+  line-height: 44px;
+  border: none;
+  text-align: center;
+  color: #009688;
+  cursor: pointer;
+  font-size: 38px;
+  transition: 0.3s;
+}
+
+.plus:hover {
+  transform: rotate(120deg);
+}
+
+.tasks-content {
+  padding: 15px;
+}
+
+.no-tasks-message {
+  color: #777;
+  color: 15px;
+}
+
+.tasks-content > span {
+  display: block;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.tasks-content > span:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.tasks-content .task-box {
+  display: flex;
+  justify-content: space-between;
+}
+.tasks-content .task-box .delete {
+  background-color: #e91e63;
+  padding: 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+.tasks-content .task-box .delete:hover {
+  background-color: rgb(233 30 99 / 60%);
+}
+
+.tasks-content .task-box.finished {
+  text-decoration: line-through;
+}
+.task-stats {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 10px auto;
+  width: 550px;
+  font-size: 12px;
+  text-align: center;
+}
+.task-stats .tasks-count span,
+.task-stats .completed-tasks span {
+  color: #fff;
+  padding: 1px 5px;
+  font-size: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: #e91e63;
+}
